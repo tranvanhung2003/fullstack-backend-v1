@@ -1,18 +1,20 @@
 const express = require("express");
+const {
+  getHomepage,
+  getABC,
+  getTvhung,
+} = require("../controllers/home.controller");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+router.get("/", getHomepage);
 
 router.get("/abc", (req, res) => {
-  res.send("check ABC");
+  getABC;
 });
 
 router.get("/tvhung", (req, res) => {
-  // res.send("<h1>Trần Văn Hưng</h1>");
-  res.render("sample");
+  getTvhung;
 });
 
 module.exports = router; // export default
