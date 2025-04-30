@@ -8,13 +8,7 @@ const {
 const router = express.Router();
 
 router.get("/", getHomepage);
-
-router.get("/abc", (req, res) => {
-  getABC;
-});
-
-router.get("/tvhung", (req, res) => {
-  getTvhung;
-});
+router.get("/abc", (req, res) => getABC);
+router.get("/tvhung", (req, res) => getTvhung);
 
 module.exports = router; // export default
